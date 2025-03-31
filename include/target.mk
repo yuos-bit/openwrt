@@ -11,10 +11,7 @@ DEVICE_TYPE?=router
 
 # Default packages - the really basic set
 DEFAULT_PACKAGES:=base-files busybox ca-bundle ca-certificates dropbear fstools libc libgcc logd libustream-wolfssl mtd netifd opkg uci uclient-fetch urandom-seed urngd luci luci-compat wget-ssl curl \
-default-settings \
-luci-app-ddns ddns-scripts-cloudflare ddns-scripts_aliyun ddns-scripts_dnspod \
-luci-app-upnp luci-app-wol luci-app-vlmcsd luci-app-ramfree \
-luci-app-timecontrol luci-app-control-timewol luci-app-control-webrestriction luci-app-control-weburl
+default-settings
 # For nas targets
 DEFAULT_PACKAGES.nas:=block-mount fdisk lsblk mdadm
 # For router targets
