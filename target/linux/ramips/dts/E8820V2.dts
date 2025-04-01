@@ -127,15 +127,6 @@
 	};
 };
 
-&gmac0 {
-	mtd-mac-address = <&factory 0xe000>;
-};
-
-&gmac1 {
-	mtd-mac-address = <&factory 0xe006>;
-	status = "okay";
-};
-
 &gsw {
 	mediatek,mdio = <&mdio>;
 	mediatek,portmap = "llllw";
@@ -150,9 +141,6 @@
 	/delete-property/ mtkdsa-wan-port;
 };
 
-&switch0 {
-	status = "disabled";
-};
 
 &state_default {
 	gpio {
