@@ -14,7 +14,6 @@
 		led-failsafe = &led_sys;
 		led-running = &led_sys;
 		led-upgrade = &led_sys;
-		label-mac-device = &gmac0;
 	};
 
 	leds {
@@ -47,7 +46,7 @@
 	};
 };
 
-&uartlite3 {
+&sdhci {
 	status = "okay";
 };
 
@@ -127,24 +126,11 @@
 	};
 };
 
-&gsw {
-	mediatek,mdio = <&mdio>;
-	mediatek,portmap = "llllw";
-	status = "okay";
-};
-
-&hnat {
-	mtketh-wan = "eth1";
-	mtketh-ppd = "eth0";
-	mtketh-lan = "eth0";
-	mtketh-max-gmac = <2>;
-	/delete-property/ mtkdsa-wan-port;
-};
-
-
-&state_default {
-	gpio {
-		groups = "i2c", "uart2", "uart3", "wdt";
-		function = "gpio";
+&pinctrl {
+	state_default: pinctrl0 {
+		gpio {
+			ralink,group = "i2c", "uart2", "uart3", "wdt";
+			ralink,function  = "gpio";
+		};
 	};
 };
