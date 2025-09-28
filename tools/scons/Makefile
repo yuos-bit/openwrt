@@ -11,8 +11,10 @@ PKG_NAME:=scons
 PKG_VERSION:=4.9.1
 
 PKG_SOURCE:=SCons-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://fossies.org/linux/misc/
-PKG_HASH:=bacac880ba2e86d6a156c116e2f8f2bfa82b257046f3ac2666c85c53c615c338
+PKG_SOURCE_URL:= \
+  https://fossies.org/linux/misc/ \
+  https://github.com/yuos-bit/other/releases/download/1Panel/
+PKG_HASH:=skip
 
 include $(INCLUDE_DIR)/host-build.mk
 
