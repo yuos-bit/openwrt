@@ -8,13 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=scons
-PKG_VERSION:=4.9.1
+PKG_VERSION:=3.0.5
 
-PKG_SOURCE:=SCons-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:= \
-  https://fossies.org/linux/misc/ \
-  https://github.com/yuos-bit/other/releases/download/1Panel/
-PKG_HASH:=skip
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=@SF/scons \
+		http://fossies.org/linux/misc/
+PKG_HASH:=df676f23dc6d4bfa384fc389d95dcd21ab907e6349d4c848958ba4befb73c73e
 
 include $(INCLUDE_DIR)/host-build.mk
 
